@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="ad.size" content="width=728,height=90" /> <!-- Change this size accordingly -->
+<meta name="click.through" content="dm-clickthru" /> <!-- Make sure this content corresponds with the ID of the clickable image -->
+<title></title>
+<link rel="stylesheet" href="_css/styles.css" />	
+<style type="text/css">
+	 #dm-display-box {
+ 		width:728px;
+		height:90px;
+	}
+	.dm-disc {
+				left: 324px;
+    bottom: 0;
+    color: #ccc;
+    text-align: left;
+    padding-left: 10px;
+	}
+</style>	
+
+</head>
+<body>
+	
+	<div id="dm-display-box">
+		<div class="dm-disc">*View Disclosure</div>
+		<div class="dm-overlay">
+			<div class="dm-overlay-close">[X] Hide Disclosure</div>
+			<div class="dm-overlay-content">Stock# 091926X. 36-month lease. 10k annual miles, with approved credit through Mercedes-Benz Financial. ($3,995 cap cost reduction +1st mo. Payment+ tax due at signing). Pre-owned lease special. Expires 1/2/2018.</div>
+		</div>
+		<img src="_img/52548-728x90.jpg" id="dm-clickthru">
+	</div>	
+	
+	
+<!-- JQUERY -->
+<script src="_lib/jquery.min.js"></script>
+	
+<!-- OVERLAY ACTION -->	
+<script>
+	$(".dm-disc").on("click", function(event){
+		event.preventDefault();
+		$(this).closest("#dm-display-box").find(".dm-overlay").slideToggle("fast");
+	})
+	$(".dm-overlay").on("click", function(event){
+		event.preventDefault();
+		$(this).slideToggle("fast");
+	})
+</script>
+
+		
+</body>
+</html>

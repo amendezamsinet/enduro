@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+#dm-display-box {
+	display: block;
+	position: relative;
+	border: solid 1px #777;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Arial";
+	font-size: 11px;
+	box-sizing: border-box;
+}
+#dm-display-box * {
+	box-sizing: border-box;
+}
+.dm-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(50,50,50,.8);
+	display: none;
+}
+.dm-overlay-close, .dm-overlay-content {
+	display: block;
+	padding: 10px;
+	color: #fff;
+}
+.dm-overlay-content {
+	padding-top: 0;
+}
+.dm-disc {
+	white-space: nowrap;
+	padding: 5px;
+	position: absolute;
+	text-decoration: underline;
+	color: #c9cbd6;
+	font-size: 10px;
+	cursor: pointer;
+	text-align: center;
+}
